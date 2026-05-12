@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz Paulo Freire</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+
+  font-family:"Poppins",sans-serif;
+
+  background:
+  linear-gradient(
+  rgba(0,0,0,0.35),
+  rgba(0,0,0,0.45)),
+  url('planodefundo.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+
+  padding:18px;
+}
+
+.container{
+  width:100%;
+  max-width:520px;
+}
+
+.titulo{
+
+  text-align:center;
+
+  font-size:clamp(28px,7vw,55px);
+
+  color:white;
+
+  margin-bottom:22px;
+
+  text-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.progresso{
+
+  width:100%;
+  height:12px;
+
+  background:rgba(255,255,255,0.2);
+
+  border-radius:999px;
+
+  overflow:hidden;
+
+  margin-bottom:22px;
+}
+
+.barra{
+
+  width:0%;
+  height:100%;
+
+  background:linear-gradient(
+  90deg,
+  #ff9800,
+  #ff5722);
+
+  transition:0.4s;
+}
+
+.caixaenunciado{
+
+  width:100%;
+
+  background:rgba(255,255,255,0.14);
+
+  backdrop-filter:blur(8px);
+
+  border:1px solid rgba(255,255,255,0.18);
+
+  border-radius:18px;
+
+  padding:16px;
+
+  margin-bottom:16px;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,0.25);
+
+  transition:0.3s;
+}
+
+.caixaenunciado:hover{
+  transform:translateY(-2px);
+}
+
+.enunciado{
+
+  color:white;
+
+  font-size:clamp(17px,4vw,24px);
+
+  margin-bottom:14px;
+
+  line-height:1.4;
+}
+
+.caixarespostas{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:8px;
+}
+
+input[type="radio"]{
+  display:none;
+}
+
+.alternativa{
+
+  display:block;
+
+  width:100%;
+
+  padding:14px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  color:white;
+
+  font-size:clamp(15px,4vw,19px);
+
+  background:rgba(255,255,255,0.10);
+
+  border:2px solid transparent;
+
+  transition:0.25s;
+}
+
+.alternativa:hover{
+
+  transform:scale(1.02);
+
+  background:rgba(255,255,255,0.22);
+}
+
+input[type="radio"]:checked + label{
+
+  background:linear-gradient(
+  135deg,
+  #ff9800,
+  #ff5722);
+
+  border-color:white;
+
+  box-shadow:
+  0 0 12px rgba(255,152,0,0.6);
+}
+
+.botao-revelado{
+
+  display:none;
+
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:linear-gradient(
+  135deg,
+  #00c853,
+  #009624);
+
+  color:white;
+
+  font-size:clamp(18px,4vw,22px);
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  margin-top:10px;
+
+  box-shadow:
+  0 8px 20px rgba(0,200,83,0.35);
+}
+
+.botao-revelado:hover{
+
+  transform:translateY(-2px);
+
+  filter:brightness(1.1);
+}
+
+#resultado{
+
+  color:white;
+
+  text-align:center;
+
+  margin-top:18px;
+
+  font-size:26px;
+}
+
+@media(max-width:480px){
+
+  .container{
+    max-width:100%;
+  }
+
+}
+.titulo2{
+  text-align:center;
+  font-size:20px;
+  color:white;
+  margin-bottom:22px;
+  text-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="titulo">
+Quiz da Semana Paulo Freire
+</h1>
+
+<div class="progresso">
+  <div class="barra" id="barra"></div>
+</div>
+
+<form action="gabarito.html" method="get">
+<h3 class="titulo2">computadores pessoais dos anos 80<h3>
+<!-- QUESTÃO 1 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+1) Em qual sistema os computadores dos anos 80 funcionavam principalmente?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q1A" name="q1" value="0">
+<label for="q1A" class="alternativa">Windows 95</label>
+
+<input type="radio" id="q1B" name="q1" value="1">
+<label for="q1B" class="alternativa">MS-DOS</label>
+
+<input type="radio" id="q1C" name="q1" value="0">
+<label for="q1C" class="alternativa">Unix</label>
+
+<input type="radio" id="q1D" name="q1" value="0">
+<label for="q1D" class="alternativa">Macintosh System</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 2 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+2) Qual dessas empresas participou da popularização dos computadores pessoais nos anos 80?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q2A" name="q2" value="0">
+<label for="q2A" class="alternativa">Microsoft</label>
+
+<input type="radio" id="q2B" name="q2" value="1">
+<label for="q2B" class="alternativa">IBM</label>
+
+<input type="radio" id="q2C" name="q2" value="0">
+<label for="q2C" class="alternativa">Xerox</label>
+
+<input type="radio" id="q2D" name="q2" value="0">
+<label for="q2D" class="alternativa">Intel</label>
+
+</div>
+</div>
+
+
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+3) Por que os computadores pessoais surgiram?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q3A" name="q3" value="1">
+<label for="q3A" class="alternativa">Para deixar os computadores menores e mais acessíveis</label>
+
+<input type="radio" id="q3B" name="q3" value="0">
+<label for="q3B" class="alternativa">Para substituir máquinas de escrever nas fábricas</label>
+
+<input type="radio" id="q3C" name="q3" value="0">
+<label for="q3C" class="alternativa">Para melhorar apenas os videogames</label>
+
+<input type="radio" id="q3D" name="q3" value="0">
+<label for="q3D" class="alternativa">Para criar computadores exclusivos para universidades</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 4 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+4) Onde surgiu o movimento dos computadores pessoais?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q4A" name="q4" value="0">
+<label for="q4A" class="alternativa">Japão</label>
+
+<input type="radio" id="q4B" name="q4" value="0">
+<label for="q4B" class="alternativa">Alemanha</label>
+
+<input type="radio" id="q4C" name="q4" value="1">
+<label for="q4C" class="alternativa">Estados Unidos</label>
+
+<input type="radio" id="q4D" name="q4" value="0">
+<label for="q4D" class="alternativa">Inglaterra</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 5 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+5) Como os usuários utilizavam os computadores dos anos 80?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q5A" name="q5" value="1">
+<label for="q5A" class="alternativa">Usando comandos de texto no sistema</label>
+
+<input type="radio" id="q5B" name="q5" value="0">
+<label for="q5B" class="alternativa">Usando janelas gráficas e ícones</label>
+
+<input type="radio" id="q5C" name="q5" value="0">
+<label for="q5C" class="alternativa">Usando telas touchscreen</label>
+
+<input type="radio" id="q5D" name="q5" value="0">
+<label for="q5D" class="alternativa">Usando comandos de voz</label>
+
+</div>
+</div>
+<h3 class="titulo2">Pessoas importantes para a evolução dos computadores</h3>
+
+<!-- QUESTÃO 6 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+6) Qual foi a principal contribuição de Tim Berners-Lee para a tecnologia?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q6A" name="q6" value="0">
+<label for="q6A" class="alternativa">Criar o primeiro computador pessoal</label>
+
+<input type="radio" id="q6B" name="q6" value="1">
+<label for="q6B" class="alternativa">Desenvolver a World Wide Web (WWW)</label>
+
+<input type="radio" id="q6C" name="q6" value="0">
+<label for="q6C" class="alternativa">Inventar o smartphone</label>
+
+<input type="radio" id="q6D" name="q6" value="0">
+<label for="q6D" class="alternativa">Criar o primeiro sistema operacional</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 7 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+7) O que Salman Khan criou para ajudar estudantes do mundo inteiro?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q7A" name="q7" value="0">
+<label for="q7A" class="alternativa">Um aplicativo de mensagens</label>
+
+<input type="radio" id="q7B" name="q7" value="1">
+<label for="q7B" class="alternativa">Uma plataforma gratuita de ensino online</label>
+
+<input type="radio" id="q7C" name="q7" value="0">
+<label for="q7C" class="alternativa">Um computador educacional</label>
+
+<input type="radio" id="q7D" name="q7" value="0">
+<label for="q7D" class="alternativa">Um sistema de inteligência artificial</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 8 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+8) Pelo que Sugata Mitra ficou conhecido?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q8A" name="q8" value="0">
+<label for="q8A" class="alternativa">Criar cursos universitários online</label>
+
+<input type="radio" id="q8B" name="q8" value="0">
+<label for="q8B" class="alternativa">Desenvolver navegadores de internet</label>
+
+<input type="radio" id="q8C" name="q8" value="1">
+<label for="q8C" class="alternativa">Realizar o experimento “Hole in the Wall”</label>
+
+<input type="radio" id="q8D" name="q8" value="0">
+<label for="q8D" class="alternativa">Criar redes sociais educativas</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 9 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+9) Qual área de atuação tornou Andrew Ng mundialmente reconhecido?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q9A" name="q9" value="0">
+<label for="q9A" class="alternativa">Desenvolvimento de jogos</label>
+
+<input type="radio" id="q9B" name="q9" value="1">
+<label for="q9B" class="alternativa">Inteligência artificial e educação tecnológica</label>
+
+<input type="radio" id="q9C" name="q9" value="0">
+<label for="q9C" class="alternativa">Criação de computadores antigos</label>
+
+<input type="radio" id="q9D" name="q9" value="0">
+<label for="q9D" class="alternativa">Produção de vídeos educativos</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 10 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+10) O que todas as pessoas citadas no texto têm em comum?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q10A" name="q10" value="0">
+<label for="q10A" class="alternativa">Trabalharam na criação de videogames</label>
+
+<input type="radio" id="q10B" name="q10" value="1">
+<label for="q10B" class="alternativa">Contribuíram para o avanço da tecnologia e da educação</label>
+
+<input type="radio" id="q10C" name="q10" value="0">
+<label for="q10C" class="alternativa">Criaram computadores pessoais nos anos 80</label>
+
+<input type="radio" id="q10D" name="q10" value="0">
+<label for="q10D" class="alternativa">Desenvolveram redes sociais famosas</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 11 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+11) Qual ideia educacional foi defendida por Johann Amos Comenius?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q11A" name="q11" value="0">
+<label for="q11A" class="alternativa">Apenas pessoas ricas deveriam estudar</label>
+
+<input type="radio" id="q11B" name="q11" value="0">
+<label for="q11B" class="alternativa">O ensino deveria ser apenas por memorização</label>
+
+<input type="radio" id="q11C" name="q11" value="1">
+<label for="q11C" class="alternativa">O aprendizado deveria respeitar a idade e o desenvolvimento do aluno</label>
+
+<input type="radio" id="q11D" name="q11" value="0">
+<label for="q11D" class="alternativa">Crianças não precisavam de livros ilustrados</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 12 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+12) O que Johann Heinrich Pestalozzi defendia sobre a aprendizagem?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q12A" name="q12" value="1">
+<label for="q12A" class="alternativa">O aprendizado deveria acontecer através da experiência e do afeto</label>
+
+<input type="radio" id="q12B" name="q12" value="0">
+<label for="q12B" class="alternativa">O ensino deveria ser totalmente rígido</label>
+
+<input type="radio" id="q12C" name="q12" value="0">
+<label for="q12C" class="alternativa">Apenas adultos deveriam frequentar escolas</label>
+
+<input type="radio" id="q12D" name="q12" value="0">
+<label for="q12D" class="alternativa">O aluno aprende melhor apenas decorando conteúdos</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 13 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+13) Qual foi a principal contribuição de B. F. Skinner para a educação e psicologia?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q13A" name="q13" value="0">
+<label for="q13A" class="alternativa">A criação da internet</label>
+
+<input type="radio" id="q13B" name="q13" value="0">
+<label for="q13B" class="alternativa">O desenvolvimento de computadores escolares</label>
+
+<input type="radio" id="q13C" name="q13" value="0">
+<label for="q13C" class="alternativa">A criação de livros didáticos ilustrados</label>
+
+<input type="radio" id="q13D" name="q13" value="1">
+<label for="q13D" class="alternativa">O conceito de condicionamento operante</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 14 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+14) O que Seymour Papert criou para ajudar crianças a aprender programação?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q14A" name="q14" value="0">
+<label for="q14A" class="alternativa">A Khan Academy</label>
+
+<input type="radio" id="q14B" name="q14" value="1">
+<label for="q14B" class="alternativa">A linguagem de programação Logo</label>
+
+<input type="radio" id="q14C" name="q14" value="0">
+<label for="q14C" class="alternativa">O sistema Windows</label>
+
+<input type="radio" id="q14D" name="q14" value="0">
+<label for="q14D" class="alternativa">A World Wide Web</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 15 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+15) Qual foi o principal impacto das ideias dessas pessoas para a educação?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q15A" name="q15" value="0">
+<label for="q15A" class="alternativa">Tornar o ensino mais baseado apenas em provas</label>
+
+<input type="radio" id="q15B" name="q15" value="1">
+<label for="q15B" class="alternativa">Incentivar novas formas de aprendizagem e uso da tecnologia na educação</label>
+
+<input type="radio" id="q15C" name="q15" value="0">
+<label for="q15C" class="alternativa">Substituir totalmente os professores por computadores</label>
+
+<input type="radio" id="q15D" name="q15" value="0">
+<label for="q15D" class="alternativa">Limitar o acesso à educação para poucas pessoas</label>
+
+</div>
+</div>
+<h3 class="titulo2">A tecnologia na área da educação</H3>
+<!-- QUESTÃO 16 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+16) Qual foi uma das principais contribuições da educação para o avanço da tecnologia?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q16A" name="q16" value="0">
+<label for="q16A" class="alternativa">Criar apenas máquinas industriais</label>
+
+<input type="radio" id="q16B" name="q16" value="1">
+<label for="q16B" class="alternativa">Desenvolver habilidades como criatividade e raciocínio lógico</label>
+
+<input type="radio" id="q16C" name="q16" value="0">
+<label for="q16C" class="alternativa">Diminuir o uso de computadores</label>
+
+<input type="radio" id="q16D" name="q16" value="0">
+<label for="q16D" class="alternativa">Substituir cientistas por máquinas</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 17 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+17) Segundo o texto, qual foi o papel das universidades no avanço tecnológico?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q17A" name="q17" value="0">
+<label for="q17A" class="alternativa">Apenas ensinar matérias básicas</label>
+
+<input type="radio" id="q17B" name="q17" value="0">
+<label for="q17B" class="alternativa">Produzir somente livros didáticos</label>
+
+<input type="radio" id="q17C" name="q17" value="1">
+<label for="q17C" class="alternativa">Incentivar pesquisas e inovações tecnológicas</label>
+
+<input type="radio" id="q17D" name="q17" value="0">
+<label for="q17D" class="alternativa">Criar redes sociais para estudantes</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 18 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+18) Como a tecnologia transformou a educação?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q18A" name="q18" value="0">
+<label for="q18A" class="alternativa">Eliminando professores das escolas</label>
+
+<input type="radio" id="q18B" name="q18" value="1">
+<label for="q18B" class="alternativa">Tornando o aprendizado mais rápido e interativo</label>
+
+<input type="radio" id="q18C" name="q18" value="0">
+<label for="q18C" class="alternativa">Proibindo o uso de bibliotecas</label>
+
+<input type="radio" id="q18D" name="q18" value="0">
+<label for="q18D" class="alternativa">Reduzindo o acesso ao conhecimento</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 19 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+19) Qual dos itens abaixo foi citado como um desafio atual da educação tecnológica?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q19A" name="q19" value="0">
+<label for="q19A" class="alternativa">Excesso de computadores nas escolas</label>
+
+<input type="radio" id="q19B" name="q19" value="0">
+<label for="q19B" class="alternativa">Falta de professores de matemática</label>
+
+<input type="radio" id="q19C" name="q19" value="1">
+<label for="q19C" class="alternativa">Dificuldade de adaptação tecnológica nas escolas</label>
+
+<input type="radio" id="q19D" name="q19" value="0">
+<label for="q19D" class="alternativa">Pouco uso de livros físicos</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 20 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+20) Qual é a principal conclusão do texto?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q20A" name="q20" value="1">
+<label for="q20A" class="alternativa">Educação e tecnologia caminham juntas para o progresso da sociedade</label>
+
+<input type="radio" id="q20B" name="q20" value="0">
+<label for="q20B" class="alternativa">A tecnologia substituirá totalmente a educação</label>
+
+<input type="radio" id="q20C" name="q20" value="0">
+<label for="q20C" class="alternativa">Apenas países ricos conseguem evoluir tecnologicamente</label>
+
+<input type="radio" id="q20D" name="q20" value="0">
+<label for="q20D" class="alternativa">O avanço tecnológico não depende da educação</label>
+
+</div>
+</div>
+<h3 class="titulo2">Evolução da tecnologia com o tempo</h3>
+<!-- QUESTÃO 21 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+21) Qual foi uma das primeiras tecnologias educativas citadas no texto?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q21A" name="q21" value="0">
+<label for="q21A" class="alternativa">Smartphone</label>
+
+<input type="radio" id="q21B" name="q21" value="0">
+<label for="q21B" class="alternativa">Rádio educativo</label>
+
+<input type="radio" id="q21C" name="q21" value="1">
+<label for="q21C" class="alternativa">Ábaco</label>
+
+<input type="radio" id="q21D" name="q21" value="0">
+<label for="q21D" class="alternativa">Lousa</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 22 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+22) Para que servia o hornbook?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q22A" name="q22" value="0">
+<label for="q22A" class="alternativa">Ensinar programação</label>
+
+<input type="radio" id="q22B" name="q22" value="1">
+<label for="q22B" class="alternativa">Alfabetização</label>
+
+<input type="radio" id="q22C" name="q22" value="0">
+<label for="q22C" class="alternativa">Fazer cálculos complexos</label>
+
+<input type="radio" id="q22D" name="q22" value="0">
+<label for="q22D" class="alternativa">Assistir aulas online</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 23 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+23) O que a lousa permitiu na educação?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q23A" name="q23" value="1">
+<label for="q23A" class="alternativa">Ensinar vários alunos ao mesmo tempo</label>
+
+<input type="radio" id="q23B" name="q23" value="0">
+<label for="q23B" class="alternativa">Criar inteligência artificial</label>
+
+<input type="radio" id="q23C" name="q23" value="0">
+<label for="q23C" class="alternativa">Aulas virtuais</label>
+
+<input type="radio" id="q23D" name="q23" value="0">
+<label for="q23D" class="alternativa">Comunicação por aplicativos</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 24 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+24) Qual foi a principal contribuição do rádio educativo?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q24A" name="q24" value="0">
+<label for="q24A" class="alternativa">Criar pesquisas online</label>
+
+<input type="radio" id="q24B" name="q24" value="0">
+<label for="q24B" class="alternativa">Ensinar programação</label>
+
+<input type="radio" id="q24C" name="q24" value="1">
+<label for="q24C" class="alternativa">Levar educação para regiões distantes</label>
+
+<input type="radio" id="q24D" name="q24" value="0">
+<label for="q24D" class="alternativa">Substituir professores</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 25 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+25) O que o computador ENIAC abriu caminho para desenvolver?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q25A" name="q25" value="0">
+<label for="q25A" class="alternativa">Livros ilustrados</label>
+
+<input type="radio" id="q25B" name="q25" value="1">
+<label for="q25B" class="alternativa">Tecnologias digitais</label>
+
+<input type="radio" id="q25C" name="q25" value="0">
+<label for="q25C" class="alternativa">Televisão educativa</label>
+
+<input type="radio" id="q25D" name="q25" value="0">
+<label for="q25D" class="alternativa">Smartphones</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 26 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+26) O que a TV educativa democratizou?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q26A" name="q26" value="0">
+<label for="q26A" class="alternativa">O acesso à internet</label>
+
+<input type="radio" id="q26B" name="q26" value="0">
+<label for="q26B" class="alternativa">O acesso à programação</label>
+
+<input type="radio" id="q26C" name="q26" value="1">
+<label for="q26C" class="alternativa">O acesso ao ensino</label>
+
+<input type="radio" id="q26D" name="q26" value="0">
+<label for="q26D" class="alternativa">O acesso aos videogames</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 27 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+27) Quem criou a World Wide Web (WWW)?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q27A" name="q27" value="0">
+<label for="q27A" class="alternativa">Paulo Freire</label>
+
+<input type="radio" id="q27B" name="q27" value="0">
+<label for="q27B" class="alternativa">Seymour Papert</label>
+
+<input type="radio" id="q27C" name="q27" value="0">
+<label for="q27C" class="alternativa">Andrew Ng</label>
+
+<input type="radio" id="q27D" name="q27" value="1">
+<label for="q27D" class="alternativa">Tim Berners-Lee</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 28 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+28) O que o smartphone integrou em um único dispositivo?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q28A" name="q28" value="0">
+<label for="q28A" class="alternativa">Apenas jogos e música</label>
+
+<input type="radio" id="q28B" name="q28" value="1">
+<label for="q28B" class="alternativa">Internet, comunicação e aplicativos</label>
+
+<input type="radio" id="q28C" name="q28" value="0">
+<label for="q28C" class="alternativa">Somente chamadas telefônicas</label>
+
+<input type="radio" id="q28D" name="q28" value="0">
+<label for="q28D" class="alternativa">Televisão e rádio</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 29 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+29) Ferramentas como ChatGPT utilizam qual tecnologia?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q29A" name="q29" value="0">
+<label for="q29A" class="alternativa">Rádio digital</label>
+
+<input type="radio" id="q29B" name="q29" value="0">
+<label for="q29B" class="alternativa">Computação gráfica</label>
+
+<input type="radio" id="q29C" name="q29" value="1">
+<label for="q29C" class="alternativa">Inteligência artificial</label>
+
+<input type="radio" id="q29D" name="q29" value="0">
+<label for="q29D" class="alternativa">Realidade virtual</label>
+
+</div>
+</div>
+
+<!-- QUESTÃO 30 -->
+<div class="caixaenunciado">
+
+<h2 class="enunciado">
+30) Segundo Paulo Freire, o que continua essencial no aprendizado, mesmo com a tecnologia?
+</h2>
+
+<div class="caixarespostas">
+
+<input type="radio" id="q30A" name="q30" value="0">
+<label for="q30A" class="alternativa">Apenas decorar conteúdos</label>
+
+<input type="radio" id="q30B" name="q30" value="0">
+<label for="q30B" class="alternativa">Uso constante de máquinas</label>
+
+<input type="radio" id="q30C" name="q30" value="1">
+<label for="q30C" class="alternativa">Curiosidade, questionamento e diálogo</label>
+
+<input type="radio" id="q30D" name="q30" value="0">
+<label for="q30D" class="alternativa">Substituir professores por computadores</label>
+
+</div>
+</div>
+
+<button
+id="botaoConfirmar"
+class="botao-revelado"
+type="button"
+onclick="verificar()">
+
+Confirmar respostas
+
+</button>
+
+<p id="resultado"></p>
+
+</form>
+
+</div>
+
+<script>
+
+const perguntas = [
+  "q1","q2","q3","q4","q5",
+  "q6","q7","q8","q9","q10",
+  "q11","q12","q13","q14","q15","q16",
+  "q17","q18","q19","q20","q21","q22",
+  "q23","q24","q25","q26","q27","q28",
+  "q29","q30"
+];
+
+function verificarTodas() {
+
+  let todasRespondidas = true;
+  let respondidas = 0;
+
+  for (let pergunta of perguntas) {
+
+    const resposta =
+      document.querySelector(
+        `input[name="${pergunta}"]:checked`
+      );
+
+    if (!resposta) {
+
+      todasRespondidas = false;
+
+    } else {
+
+      respondidas++;
+    }
+
+  }
+
+  const porcentagem =
+    (respondidas / perguntas.length) * 100;
+
+  document.getElementById("barra")
+    .style.width = porcentagem + "%";
+
+  const botao =
+    document.getElementById("botaoConfirmar");
+
+  if (todasRespondidas) {
+
+    botao.style.display = "block";
+
+  } else {
+
+    botao.style.display = "none";
+
+  }
+
+}
+
+const radios =
+  document.querySelectorAll(
+    'input[type="radio"]'
+  );
+
+radios.forEach(radio => {
+
+  radio.addEventListener(
+    "click",
+    verificarTodas
+  );
+
+});
+
+function verificar() {
+
+  let pontos = 0;
+
+  let respostas = {};
+
+  for (let pergunta of perguntas) {
+
+    const resposta =
+      document.querySelector(
+        `input[name="${pergunta}"]:checked`
+      );
+
+    if (resposta) {
+
+      respostas[pergunta] =
+        resposta.id;
+
+      if (resposta.value === "1") {
+
+        pontos++;
+
+      }
+
+    } else {
+
+      respostas[pergunta] =
+        "não respondida";
+
+    }
+
+  }
+
+  localStorage.setItem(
+    "respostas",
+    JSON.stringify(respostas)
+  );
+
+  localStorage.setItem(
+    "pontos",
+    pontos
+  );
+
+  window.location.href =
+    "gabarito.html";
+
+}
+
+</script>
+
+</body>
+</html>

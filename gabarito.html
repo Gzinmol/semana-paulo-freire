@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gabarito</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+
+  font-family:"Poppins",sans-serif;
+
+  background:
+  linear-gradient(
+  rgba(0,0,0,0.35),
+  rgba(0,0,0,0.45)),
+  url('planodefundo.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:20px;
+}
+
+.container{
+
+  width:100%;
+  max-width:650px;
+
+  background:rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.2);
+
+  border-radius:24px;
+
+  padding:25px;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.3);
+}
+
+.titulo{
+
+  text-align:center;
+
+  color:white;
+
+  font-size:clamp(30px,7vw,55px);
+
+  margin-bottom:25px;
+
+  text-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.divgabarito{
+
+  display:grid;
+
+  grid-template-columns:
+  55px repeat(4,1fr);
+
+  gap:8px;
+}
+
+.divgabarito div{
+
+  height:58px;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  border-radius:14px;
+
+  font-size:20px;
+
+  font-weight:bold;
+
+  transition:0.3s;
+}
+
+.letras{
+
+  background:rgba(255,255,255,0.12);
+
+  color:white;
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(5px);
+}
+
+.letrasq{
+
+  background:linear-gradient(
+  135deg,
+  #ff9800,
+  #ff5722);
+
+  color:white;
+}
+
+#resultado{
+
+  text-align:center;
+
+  margin-top:25px;
+
+  color:white;
+
+  font-size:30px;
+
+  font-weight:bold;
+
+  text-shadow:0 3px 8px rgba(0,0,0,0.4);
+}
+
+@media(max-width:600px){
+
+  .divgabarito{
+
+    grid-template-columns:
+    45px repeat(4,1fr);
+
+    gap:6px;
+  }
+
+  .divgabarito div{
+
+    height:50px;
+
+    font-size:17px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="titulo">
+Gabarito
+</h1>
+
+<div class="divgabarito">
+
+<div class="letrasq">1</div>
+<div class="letras" id="q1A">A</div>
+<div class="letras" id="q1B">B</div>
+<div class="letras" id="q1C">C</div>
+<div class="letras" id="q1D">D</div>
+
+<div class="letrasq">2</div>
+<div class="letras" id="q2A">A</div>
+<div class="letras" id="q2B">B</div>
+<div class="letras" id="q2C">C</div>
+<div class="letras" id="q2D">D</div>
+
+<div class="letrasq">3</div>
+<div class="letras" id="q3A">A</div>
+<div class="letras" id="q3B">B</div>
+<div class="letras" id="q3C">C</div>
+<div class="letras" id="q3D">D</div>
+
+<div class="letrasq">4</div>
+<div class="letras" id="q4A">A</div>
+<div class="letras" id="q4B">B</div>
+<div class="letras" id="q4C">C</div>
+<div class="letras" id="q4D">D</div>
+
+<div class="letrasq">5</div>
+<div class="letras" id="q5A">A</div>
+<div class="letras" id="q5B">B</div>
+<div class="letras" id="q5C">C</div>
+<div class="letras" id="q5D">D</div>
+
+<div class="letrasq">6</div>
+<div class="letras" id="q6A">A</div>
+<div class="letras" id="q6B">B</div>
+<div class="letras" id="q6C">C</div>
+<div class="letras" id="q6D">D</div>
+
+<div class="letrasq">7</div>
+<div class="letras" id="q7A">A</div>
+<div class="letras" id="q7B">B</div>
+<div class="letras" id="q7C">C</div>
+<div class="letras" id="q7D">D</div>
+
+<div class="letrasq">8</div>
+<div class="letras" id="q8A">A</div>
+<div class="letras" id="q8B">B</div>
+<div class="letras" id="q8C">C</div>
+<div class="letras" id="q8D">D</div>
+
+<div class="letrasq">9</div>
+<div class="letras" id="q9A">A</div>
+<div class="letras" id="q9B">B</div>
+<div class="letras" id="q9C">C</div>
+<div class="letras" id="q9D">D</div>
+
+<div class="letrasq">10</div>
+<div class="letras" id="q10A">A</div>
+<div class="letras" id="q10B">B</div>
+<div class="letras" id="q10C">C</div>
+<div class="letras" id="q10D">D</div>
+
+<div class="letrasq">11</div>
+<div class="letras" id="q11A">A</div>
+<div class="letras" id="q11B">B</div>
+<div class="letras" id="q11C">C</div>
+<div class="letras" id="q11D">D</div>
+
+<div class="letrasq">12</div>
+<div class="letras" id="q12A">A</div>
+<div class="letras" id="q12B">B</div>
+<div class="letras" id="q12C">C</div>
+<div class="letras" id="q12D">D</div>
+
+<div class="letrasq">13</div>
+<div class="letras" id="q13A">A</div>
+<div class="letras" id="q13B">B</div>
+<div class="letras" id="q13C">C</div>
+<div class="letras" id="q13D">D</div>
+
+<div class="letrasq">14</div>
+<div class="letras" id="q14A">A</div>
+<div class="letras" id="q14B">B</div>
+<div class="letras" id="q14C">C</div>
+<div class="letras" id="q14D">D</div>
+
+<div class="letrasq">15</div>
+<div class="letras" id="q15A">A</div>
+<div class="letras" id="q15B">B</div>
+<div class="letras" id="q15C">C</div>
+<div class="letras" id="q15D">D</div>
+
+<div class="letrasq">16</div>
+<div class="letras" id="q16A">A</div>
+<div class="letras" id="q16B">B</div>
+<div class="letras" id="q16C">C</div>
+<div class="letras" id="q16D">D</div>
+
+<div class="letrasq">17</div>
+<div class="letras" id="q17A">A</div>
+<div class="letras" id="q17B">B</div>
+<div class="letras" id="q17C">C</div>
+<div class="letras" id="q17D">D</div>
+
+<div class="letrasq">18</div>
+<div class="letras" id="q18A">A</div>
+<div class="letras" id="q18B">B</div>
+<div class="letras" id="q18C">C</div>
+<div class="letras" id="q18D">D</div>
+
+<div class="letrasq">19</div>
+<div class="letras" id="q19A">A</div>
+<div class="letras" id="q19B">B</div>
+<div class="letras" id="q19C">C</div>
+<div class="letras" id="q19D">D</div>
+
+<div class="letrasq">20</div>
+<div class="letras" id="q20A">A</div>
+<div class="letras" id="q20B">B</div>
+<div class="letras" id="q20C">C</div>
+<div class="letras" id="q20D">D</div>
+
+<div class="letrasq">21</div>
+<div class="letras" id="q21A">A</div>
+<div class="letras" id="q21B">B</div>
+<div class="letras" id="q21C">C</div>
+<div class="letras" id="q21D">D</div>
+
+<div class="letrasq">22</div>
+<div class="letras" id="q22A">A</div>
+<div class="letras" id="q22B">B</div>
+<div class="letras" id="q22C">C</div>
+<div class="letras" id="q22D">D</div>
+
+<div class="letrasq">23</div>
+<div class="letras" id="q23A">A</div>
+<div class="letras" id="q23B">B</div>
+<div class="letras" id="q23C">C</div>
+<div class="letras" id="q23D">D</div>
+
+<div class="letrasq">24</div>
+<div class="letras" id="q24A">A</div>
+<div class="letras" id="q24B">B</div>
+<div class="letras" id="q24C">C</div>
+<div class="letras" id="q24D">D</div>
+
+<div class="letrasq">25</div>
+<div class="letras" id="q25A">A</div>
+<div class="letras" id="q25B">B</div>
+<div class="letras" id="q25C">C</div>
+<div class="letras" id="q25D">D</div>
+
+<div class="letrasq">26</div>
+<div class="letras" id="q26A">A</div>
+<div class="letras" id="q26B">B</div>
+<div class="letras" id="q26C">C</div>
+<div class="letras" id="q26D">D</div>
+
+<div class="letrasq">27</div>
+<div class="letras" id="q27A">A</div>
+<div class="letras" id="q27B">B</div>
+<div class="letras" id="q27C">C</div>
+<div class="letras" id="q27D">D</div>
+
+<div class="letrasq">28</div>
+<div class="letras" id="q28A">A</div>
+<div class="letras" id="q28B">B</div>
+<div class="letras" id="q28C">C</div>
+<div class="letras" id="q28D">D</div>
+
+<div class="letrasq">29</div>
+<div class="letras" id="q29A">A</div>
+<div class="letras" id="q29B">B</div>
+<div class="letras" id="q29C">C</div>
+<div class="letras" id="q29D">D</div>
+
+<div class="letrasq">30</div>
+<div class="letras" id="q30A">A</div>
+<div class="letras" id="q30B">B</div>
+<div class="letras" id="q30C">C</div>
+<div class="letras" id="q30D">D</div>
+</div>
+
+<p id="resultado"></p>
+
+</div>
+
+<script>
+
+const respostas =
+JSON.parse(
+localStorage.getItem("respostas")
+);
+
+const pontos =
+localStorage.getItem("pontos");
+
+document.getElementById("resultado")
+.innerText =
+"Você fez " + pontos + " pontos";
+
+const gabarito = {
+
+q1:"q1B",
+q2:"q2B",
+q3:"q3A",
+q4:"q4C",
+q5:"q5A",
+q6:"q6B",
+q7:"q7B",
+q8:"q8C",
+q9:"q9B",
+q10:"q10B",
+q11:"q11C",
+q12:"q12A",
+q13:"q13D",
+q14:"q14B",
+q15:"q15B",
+q16:"q16B",
+q17:"q17C",
+q18:"q18B",
+q19:"q19C",
+q20:"q20A",
+q21:"q21C",
+q22:"q22B",
+q23:"q23A",
+q24:"q24C",
+q25:"q25B",
+q26:"q26C",
+q27:"q27D",
+q28:"q28B",
+q29:"q29C",
+q30:"q30C",
+
+};
+
+for(let q in respostas){
+
+const usuario = respostas[q];
+
+if(!usuario ||
+usuario === "não respondida")
+continue;
+
+const elUsuario =
+document.getElementById(usuario);
+
+if(usuario !== gabarito[q]){
+
+elUsuario.style.background =
+"linear-gradient(135deg,#ff5252,#ff1744)";
+
+elUsuario.style.color = "white";
+
+}else{
+
+elUsuario.style.background =
+"linear-gradient(135deg,#00c853,#00e676)";
+
+elUsuario.style.color = "white";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
